@@ -11,7 +11,7 @@ public class TaximeterCalculator {
 
         if (distance > 0 && totalAmount > 0 && totalAmount <= minPrice) {
             System.out.printf("The total amount is %.2f\n", minPrice);
-        } else if (totalAmount > minPrice) {
+        } else if (distance > 0 && totalAmount > minPrice) {
             System.out.printf("The total amount is %.2f\n", totalAmount);
         } else {
             System.out.println("Invalid value entered");
