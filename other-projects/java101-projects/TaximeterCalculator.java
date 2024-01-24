@@ -7,12 +7,12 @@ public class TaximeterCalculator {
 
         System.out.print("Enter the distance in km: ");
         distance = sc.nextDouble();
-        totalAmount = distance * feePerKM;
+        totalAmount = openingFee + (distance * feePerKM);
 
-        if (totalAmount > 0 && totalAmount <= minPrice) {
+        if (distance > 0 && totalAmount > 0 && totalAmount <= minPrice) {
             System.out.printf("The total amount is %.2f\n", minPrice);
         } else if (totalAmount > minPrice) {
-            System.out.printf("The total amount is %.2f\n", (openingFee + totalAmount));
+            System.out.printf("The total amount is %.2f\n", totalAmount);
         } else {
             System.out.println("Invalid value entered");
         }
